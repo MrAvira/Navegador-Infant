@@ -15,7 +15,7 @@ namespace TemplateTelasTeste {
         }
 
         private void Form2_Load(object sender, EventArgs e) {
-
+            FormBorderStyle = FormBorderStyle.None;
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -37,6 +37,10 @@ namespace TemplateTelasTeste {
 
         private void btnHomeNav_Click(object sender, EventArgs e) {
             webBrowser1.Navigate(new Uri("http://google.com"));
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e) {
+
         }
     }
 }

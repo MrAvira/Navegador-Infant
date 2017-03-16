@@ -22,3 +22,15 @@ C:\Users\WIN\Desktop\TemplateTelasTeste\TemplateTelasTeste\obj\Debug\TemplateTel
 C:\Users\WIN\Desktop\TemplateTelasTeste\NAVEGADOR\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
 C:\Users\WIN\Desktop\TemplateTelasTeste\NAVEGADOR\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
 C:\Users\WIN\Desktop\TemplateTelasTeste\NAVEGADOR\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.pdb
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csprojResolveAssemblyReference.cache
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.navegador.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\MetroFramework.dll
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.principal.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config.resources

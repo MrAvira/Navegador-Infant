@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TemplateTelasTeste {
-    public partial class Form3 : Form {
-        public Form3() {
+    public partial class config : Form {
+        public config() {
             InitializeComponent();
         }
 
@@ -18,6 +18,14 @@ namespace TemplateTelasTeste {
         {
             listBox1.Items.Add(textBox1.Text);
 
+        }
+
+        private void Form3_Load(object sender, EventArgs e) {
+            FormBorderStyle = FormBorderStyle.None;
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            listBox1.Items.Remove(listBox1.Text);
         }
     }
 }
