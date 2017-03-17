@@ -63,5 +63,13 @@ namespace TemplateTelasTeste {
 
 
         }
+
+        private void btnMenu_Click(object sender, EventArgs e) {
+            if (panel1.Size.Equals(new Size(210, panel1.Height))) {
+                panel1.Size = new Size(39, panel1.Height);
+            }
+            else
+                panel1.Size = new Size(210, panel1.Height);
+        }
     }
 }

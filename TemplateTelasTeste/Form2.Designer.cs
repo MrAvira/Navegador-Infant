@@ -28,13 +28,15 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnHomeNav = new System.Windows.Forms.Button();
             this.btnVoltarNav = new System.Windows.Forms.Button();
+            this.btnHomeNav = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnIrNav
             // 
+            this.btnIrNav.AccessibleDescription = "Ir";
+            this.btnIrNav.AccessibleName = "Ir";
             this.btnIrNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.btnIrNav.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIrNav.BackgroundImage")));
             this.btnIrNav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -59,6 +61,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 45);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(849, 420);
             this.webBrowser1.TabIndex = 5;
             this.webBrowser1.Url = new System.Uri("http://www.google.com", System.UriKind.Absolute);
@@ -93,24 +96,6 @@
             this.comboBox1.Size = new System.Drawing.Size(720, 28);
             this.comboBox1.TabIndex = 7;
             // 
-            // btnHomeNav
-            // 
-            this.btnHomeNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.btnHomeNav.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHomeNav.BackgroundImage")));
-            this.btnHomeNav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHomeNav.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnHomeNav.FlatAppearance.BorderSize = 0;
-            this.btnHomeNav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
-            this.btnHomeNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomeNav.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomeNav.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnHomeNav.Location = new System.Drawing.Point(810, 0);
-            this.btnHomeNav.Name = "btnHomeNav";
-            this.btnHomeNav.Size = new System.Drawing.Size(39, 43);
-            this.btnHomeNav.TabIndex = 6;
-            this.btnHomeNav.UseVisualStyleBackColor = true;
-            this.btnHomeNav.Click += new System.EventHandler(this.btnHomeNav_Click);
-            // 
             // btnVoltarNav
             // 
             this.btnVoltarNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
@@ -128,6 +113,24 @@
             this.btnVoltarNav.TabIndex = 2;
             this.btnVoltarNav.UseVisualStyleBackColor = true;
             this.btnVoltarNav.Click += new System.EventHandler(this.btnVoltarNav_Click);
+            // 
+            // btnHomeNav
+            // 
+            this.btnHomeNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.btnHomeNav.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHomeNav.BackgroundImage")));
+            this.btnHomeNav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHomeNav.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnHomeNav.FlatAppearance.BorderSize = 0;
+            this.btnHomeNav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
+            this.btnHomeNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomeNav.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomeNav.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnHomeNav.Location = new System.Drawing.Point(810, 0);
+            this.btnHomeNav.Name = "btnHomeNav";
+            this.btnHomeNav.Size = new System.Drawing.Size(39, 43);
+            this.btnHomeNav.TabIndex = 6;
+            this.btnHomeNav.UseVisualStyleBackColor = true;
+            this.btnHomeNav.Click += new System.EventHandler(this.btnHomeNav_Click);
             // 
             // navegador
             // 

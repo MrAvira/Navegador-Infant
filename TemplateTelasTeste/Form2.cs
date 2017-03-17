@@ -40,7 +40,7 @@ namespace TemplateTelasTeste {
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e) {
-
+            comboBox1.Text = webBrowser1.Url.ToString() ;
         }
     }
 }
