@@ -33,4 +33,8 @@ C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\Te
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\MetroFramework.dll
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.principal.resources
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Form4.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\Database1.mdf
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\Database1_log.ldf
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config1.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources

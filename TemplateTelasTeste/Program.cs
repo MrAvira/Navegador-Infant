@@ -13,7 +13,11 @@ namespace TemplateTelasTeste {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new principal());
+            Form4 login = new Form4();
+            login.ShowDialog();
+            if (login.logado) {
+                Application.Run(new principal(login.usuario,login.senha));
+            }
         }
     }
 }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 namespace TemplateTelasTeste {
     public partial class principal : Form {
         navegador nav = new navegador();
-        config config = new config();
+        config1 config = new config1();
 
-        public principal() {
+        public principal(string usuario, string senha) {
             InitializeComponent();
         }
 
@@ -70,6 +70,10 @@ namespace TemplateTelasTeste {
             }
             else
                 panel1.Size = new Size(210, panel1.Height);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e) {
+            Application.Restart();
         }
     }
 }
