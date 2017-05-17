@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TemplateTelasTeste {
     public partial class principal : Form {
-        navegador nav = new navegador();
+        string usuario;
+        string senha;
+        navegador nav;
         config1 config = new config1();
 
         public principal(string usuario, string senha) {
             InitializeComponent();
+            this.usuario = usuario;
+            this.senha = senha;
+            nav = new navegador(usuario, senha);
         }
 
         private void Template_Load(object sender, EventArgs e) {

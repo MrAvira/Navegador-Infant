@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace TemplateTelasTeste {
     public static class DbClass {
         //private static SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
-        private static SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+        private static SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Navegador_flavioVersion\TemplateTelasTeste\Database1.mdf;Integrated Security=True;Connect Timeout=30");
         private static SqlCommand cmd;
         private static SqlDataReader reader;
         
@@ -33,6 +33,28 @@ namespace TemplateTelasTeste {
                 MessageBox.Show("" + ex);
                 cn.Close();
                 return -1;
+            }
+        }
+
+        public static string getPass(int id) {
+            string pass;
+            try {
+                cmd = new SqlCommand("SELECT [senha] FROM [usuarios] WHERE [Id] = @Id", cn);
+                cmd.Parameters.AddWithValue("@Id", id);
+                cn.Open();
+                reader = cmd.ExecuteReader();
+                while (reader.Read()) {
+                    pass = reader["senha"].ToString();
+                    cn.Close();
+                    return pass;
+                }
+                cn.Close();
+                return "Erro";
+            }
+            catch (Exception ex) {
+                MessageBox.Show("" + ex);
+                cn.Close();
+                return "Erro";
             }
         }
 
@@ -240,6 +262,24 @@ namespace TemplateTelasTeste {
                 cmd.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("Configuração Salva");
+                return true;
+            }
+            catch (Exception ex) {
+                MessageBox.Show("" + ex);
+                cn.Close();
+                return false;
+            }
+        }
+
+        public static bool updatePass(int id, string senhan) {
+            try {
+                cmd = new SqlCommand("UPDATE [Usuarios] SET senha = @senha WHERE Id = @Id ", cn);
+                cmd.Parameters.AddWithValue("@senha", senhan);
+                cmd.Parameters.AddWithValue("@Id", id);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("Senha alterada com sucesso!", "Sucesso!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception ex) {

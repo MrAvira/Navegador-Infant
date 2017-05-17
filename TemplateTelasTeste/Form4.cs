@@ -42,6 +42,7 @@ namespace TemplateTelasTeste {
             }
             else {
                 logado = false;
+                lblLoginError.Visible = true;
             }
         }
 

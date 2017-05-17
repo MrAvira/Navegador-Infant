@@ -81,5 +81,15 @@ namespace TemplateTelasTeste {
             }
             DbClass.setConfig(id, configs);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e) {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e) {
+            if(textBox2.Text == textBox3.Text) {
+                DbClass.updatePass(id, textBox3.Text);
+            }
+        }
     }
 }

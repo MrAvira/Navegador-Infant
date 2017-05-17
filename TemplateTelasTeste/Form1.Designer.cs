@@ -35,7 +35,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(16)))), ((int)(((byte)(50)))));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::TemplateTelasTeste.Properties.Resources.derp3l;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Controls.Add(this.btnOption3);
@@ -45,7 +47,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(50, 569);
+            this.panel1.Size = new System.Drawing.Size(51, 569);
             this.panel1.TabIndex = 0;
             // 
             // btnLogout
@@ -57,8 +59,8 @@
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 15F);
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnLogout.ForeColor = System.Drawing.Color.Honeydew;
             this.btnLogout.Location = new System.Drawing.Point(0, 300);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
@@ -77,7 +79,7 @@
             this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Arial Narrow", 15F);
-            this.btnMenu.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(4);
@@ -96,8 +98,8 @@
             this.btnOption3.FlatAppearance.BorderSize = 0;
             this.btnOption3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
             this.btnOption3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOption3.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOption3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnOption3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnOption3.ForeColor = System.Drawing.Color.Honeydew;
             this.btnOption3.Location = new System.Drawing.Point(0, 194);
             this.btnOption3.Margin = new System.Windows.Forms.Padding(4);
             this.btnOption3.Name = "btnOption3";
@@ -116,8 +118,8 @@
             this.btnOption2.FlatAppearance.BorderSize = 0;
             this.btnOption2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
             this.btnOption2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOption2.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOption2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnOption2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnOption2.ForeColor = System.Drawing.Color.Honeydew;
             this.btnOption2.Location = new System.Drawing.Point(0, 247);
             this.btnOption2.Margin = new System.Windows.Forms.Padding(4);
             this.btnOption2.Name = "btnOption2";
@@ -137,8 +139,8 @@
             this.btnOption1.FlatAppearance.BorderSize = 0;
             this.btnOption1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
             this.btnOption1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOption1.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOption1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnOption1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnOption1.ForeColor = System.Drawing.Color.Honeydew;
             this.btnOption1.Location = new System.Drawing.Point(0, 139);
             this.btnOption1.Margin = new System.Windows.Forms.Padding(4);
             this.btnOption1.Name = "btnOption1";
@@ -159,9 +161,8 @@
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(585, 425);
+            this.MinimumSize = new System.Drawing.Size(585, 424);
             this.Name = "principal";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template";
             this.Load += new System.EventHandler(this.Template_Load);

@@ -25,10 +25,14 @@ namespace TemplateTelasTeste {
         }
 
         private void Form3_Load(object sender, EventArgs e) {
+            
             FormBorderStyle = FormBorderStyle.None;
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
             foreach (string item in DbClass.getUsers()) {
                 listBox1.Items.Add(item);
                 listBox2.Items.Add(item);
+
             }
         }
 
@@ -42,7 +46,7 @@ namespace TemplateTelasTeste {
                 DbClass.deletUser(listBox1.Text);
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
-                foreach (string item in DbClass.getUsers()) {
+                foreach (string item in DbClass.getUsers()){
                     listBox1.Items.Add(item);
                     listBox2.Items.Add(item);
                 }
@@ -53,7 +57,22 @@ namespace TemplateTelasTeste {
             if (!listBox2.Text.Equals("")) {
                 config2 formc2 = new config2(listBox2.Text);
                 formc2.ShowDialog();
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                foreach (string item in DbClass.getUsers()) {
+                    listBox1.Items.Add(item);
+                    listBox2.Items.Add(item);
+                }
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e) {
+
         }
     }
 }

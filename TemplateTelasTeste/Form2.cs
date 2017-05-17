@@ -10,21 +10,37 @@ using System.Windows.Forms;
 
 namespace TemplateTelasTeste {
     public partial class navegador : Form {
-        public navegador() {
+        string usuario;
+        string senha;
+        int id;
+        public navegador(string usuario,string senha) {
             InitializeComponent();
+            this.usuario = usuario;
+            this.senha = senha;
+            id = DbClass.getId(usuario);
         }
 
         private void Form2_Load(object sender, EventArgs e) {
             FormBorderStyle = FormBorderStyle.None;
+            foreach (string item in DbClass.getSites(id))
+            {
+                comboBox1.Items.Add(item);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e) {
+            //Uri uri = new Uri("http://myUrl/%2E%2E/%2E%2E");
+            //Console.WriteLine(uri.AbsoluteUri);
+
             if (comboBox1.Text.StartsWith("http://") || comboBox1.Text.StartsWith("https://") && !String.IsNullOrEmpty(comboBox1.Text))
                 webBrowser1.Navigate(new Uri(comboBox1.Text));
             else if (!String.IsNullOrEmpty(comboBox1.Text))
+            {
+                //comboBox1.Text = "http://" + comboBox1.Text;
                 webBrowser1.Navigate(new Uri("http://" + comboBox1.Text));
+            }
             else
-                MessageBox.Show("Insira um endereço valido \nEx: google.com ","erro");
+                MessageBox.Show("Insira um endereço valido \nEx: google.com ", "erro");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) {
@@ -41,6 +57,23 @@ namespace TemplateTelasTeste {
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e) {
             comboBox1.Text = webBrowser1.Url.ToString() ;
+        }
+
+        private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
+        {
+            foreach (string item in DbClass.getSites(id)){
+                Uri uri = new Uri(comboBox1.Text);
+                uri = new Uri(uri.AbsoluteUri);
+                Uri itemUri = new Uri("http://" + item);
+                if(uri == itemUri)
+                {
+                    MessageBox.Show("Igual");
+                }
+                else
+                {
+                    MessageBox.Show("Diferente");
+                }
+            }
         }
     }
 }
