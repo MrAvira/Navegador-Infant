@@ -86,7 +86,11 @@ namespace TemplateTelasTeste {
                 //this.Close();
             }
             else {
+<<<<<<< HEAD
                 lblLoginError.Text = "Senha ou login incorretos!";
+=======
+                logado = false;
+>>>>>>> origin/master
                 lblLoginError.Visible = true;
             }
         }

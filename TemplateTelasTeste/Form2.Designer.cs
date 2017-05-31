@@ -38,7 +38,11 @@
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.webBrowser1.Location = new System.Drawing.Point(3, 39);
+=======
+            this.webBrowser1.Location = new System.Drawing.Point(0, 39);
+>>>>>>> origin/master
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
@@ -60,7 +64,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(849, 39);
+            this.panel2.Size = new System.Drawing.Size(849, 36);
             this.panel2.TabIndex = 6;
             // 
             // comboBox1
@@ -69,9 +73,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
+<<<<<<< HEAD
             this.comboBox1.Location = new System.Drawing.Point(58, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(707, 24);
+=======
+            this.comboBox1.Items.AddRange(new object[] {
+            "www.google.com",
+            "www.fatecpg.com.br",
+            "www.youtube.com"});
+            this.comboBox1.Location = new System.Drawing.Point(58, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(707, 21);
+>>>>>>> origin/master
             this.comboBox1.TabIndex = 7;
             this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
@@ -96,6 +110,27 @@
             this.btnIrNav.UseVisualStyleBackColor = false;
             this.btnIrNav.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnIrNav
+            // 
+            this.btnIrNav.AccessibleDescription = "Ir";
+            this.btnIrNav.AccessibleName = "Ir";
+            this.btnIrNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.btnIrNav.BackColor = System.Drawing.Color.Transparent;
+            this.btnIrNav.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIrNav.BackgroundImage")));
+            this.btnIrNav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnIrNav.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnIrNav.FlatAppearance.BorderSize = 0;
+            this.btnIrNav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
+            this.btnIrNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrNav.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIrNav.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnIrNav.Location = new System.Drawing.Point(771, 0);
+            this.btnIrNav.Name = "btnIrNav";
+            this.btnIrNav.Size = new System.Drawing.Size(39, 36);
+            this.btnIrNav.TabIndex = 3;
+            this.btnIrNav.UseVisualStyleBackColor = false;
+            this.btnIrNav.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnVoltarNav
             // 
             this.btnVoltarNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
@@ -110,7 +145,7 @@
             this.btnVoltarNav.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnVoltarNav.Location = new System.Drawing.Point(0, 0);
             this.btnVoltarNav.Name = "btnVoltarNav";
-            this.btnVoltarNav.Size = new System.Drawing.Size(39, 39);
+            this.btnVoltarNav.Size = new System.Drawing.Size(39, 36);
             this.btnVoltarNav.TabIndex = 2;
             this.btnVoltarNav.UseVisualStyleBackColor = false;
             this.btnVoltarNav.Click += new System.EventHandler(this.btnVoltarNav_Click);
@@ -129,7 +164,7 @@
             this.btnHomeNav.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnHomeNav.Location = new System.Drawing.Point(810, 0);
             this.btnHomeNav.Name = "btnHomeNav";
-            this.btnHomeNav.Size = new System.Drawing.Size(39, 39);
+            this.btnHomeNav.Size = new System.Drawing.Size(39, 36);
             this.btnHomeNav.TabIndex = 6;
             this.btnHomeNav.UseVisualStyleBackColor = false;
             this.btnHomeNav.Click += new System.EventHandler(this.btnHomeNav_Click);
@@ -139,7 +174,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(16)))), ((int)(((byte)(50)))));
+<<<<<<< HEAD
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+=======
+            this.BackgroundImage = global::TemplateTelasTeste.Properties.Resources.derp3l;
+>>>>>>> origin/master
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(849, 476);
             this.ControlBox = false;

@@ -23,7 +23,10 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(config1));
+=======
+>>>>>>> origin/master
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,13 +40,19 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+<<<<<<< HEAD
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cmbTema = new System.Windows.Forms.ComboBox();
+=======
+>>>>>>> origin/master
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+<<<<<<< HEAD
             this.groupBox4.SuspendLayout();
+=======
+>>>>>>> origin/master
             this.SuspendLayout();
             // 
             // groupBox3
@@ -68,10 +77,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
+<<<<<<< HEAD
             this.label2.ForeColor = System.Drawing.Color.LightCyan;
             this.label2.Location = new System.Drawing.Point(4, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 21);
+=======
+            this.label2.Location = new System.Drawing.Point(4, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 28);
+>>>>>>> origin/master
             this.label2.TabIndex = 16;
             this.label2.Text = "Senha:";
             // 
@@ -79,10 +94,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+<<<<<<< HEAD
             this.label1.ForeColor = System.Drawing.Color.LightCyan;
             this.label1.Location = new System.Drawing.Point(4, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 21);
+=======
+            this.label1.Location = new System.Drawing.Point(4, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 28);
+>>>>>>> origin/master
             this.label1.TabIndex = 15;
             this.label1.Text = "Login:";
             // 
@@ -91,12 +112,18 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(9, 142);
             this.textBox2.Name = "textBox2";
+<<<<<<< HEAD
             this.textBox2.Size = new System.Drawing.Size(195, 22);
             this.textBox2.TabIndex = 14;
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+=======
+            this.textBox2.Size = new System.Drawing.Size(195, 27);
+            this.textBox2.TabIndex = 14;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+>>>>>>> origin/master
             // 
             // textBox1
             // 
@@ -104,10 +131,15 @@
             this.textBox1.Location = new System.Drawing.Point(9, 71);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
+<<<<<<< HEAD
             this.textBox1.Size = new System.Drawing.Size(194, 22);
             this.textBox1.TabIndex = 13;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+=======
+            this.textBox1.Size = new System.Drawing.Size(194, 27);
+            this.textBox1.TabIndex = 13;
+>>>>>>> origin/master
             // 
             // button1
             // 
@@ -115,7 +147,11 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
+<<<<<<< HEAD
             this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
+=======
+            this.button1.ForeColor = System.Drawing.Color.Teal;
+>>>>>>> origin/master
             this.button1.Location = new System.Drawing.Point(151, 237);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
@@ -145,7 +181,11 @@
             this.button3.AutoSize = true;
             this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F);
+<<<<<<< HEAD
             this.button3.ForeColor = System.Drawing.Color.DarkSlateGray;
+=======
+            this.button3.ForeColor = System.Drawing.Color.Teal;
+>>>>>>> origin/master
             this.button3.Location = new System.Drawing.Point(100, 237);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
@@ -158,26 +198,44 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
+<<<<<<< HEAD
             this.listBox2.ItemHeight = 21;
             this.listBox2.Location = new System.Drawing.Point(6, 63);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(255, 130);
+=======
+            this.listBox2.ItemHeight = 28;
+            this.listBox2.Location = new System.Drawing.Point(6, 63);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(255, 144);
+>>>>>>> origin/master
             this.listBox2.TabIndex = 1;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
+<<<<<<< HEAD
             this.listBox1.ItemHeight = 21;
             this.listBox1.Location = new System.Drawing.Point(6, 63);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(255, 130);
+=======
+            this.listBox1.ItemHeight = 28;
+            this.listBox1.Location = new System.Drawing.Point(6, 63);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(255, 144);
+>>>>>>> origin/master
             this.listBox1.TabIndex = 0;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F);
+<<<<<<< HEAD
             this.button2.ForeColor = System.Drawing.Color.DarkSlateGray;
+=======
+            this.button2.ForeColor = System.Drawing.Color.Teal;
+>>>>>>> origin/master
             this.button2.Location = new System.Drawing.Point(153, 237);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
@@ -206,17 +264,25 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+<<<<<<< HEAD
             this.flowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel1.BackgroundImage")));
+=======
+            this.flowLayoutPanel1.BackgroundImage = global::TemplateTelasTeste.Properties.Resources.derp3l;
+>>>>>>> origin/master
             this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel1.Controls.Add(this.groupBox3);
             this.flowLayoutPanel1.Controls.Add(this.groupBox1);
             this.flowLayoutPanel1.Controls.Add(this.groupBox2);
+<<<<<<< HEAD
             this.flowLayoutPanel1.Controls.Add(this.groupBox4);
+=======
+>>>>>>> origin/master
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(849, 465);
             this.flowLayoutPanel1.TabIndex = 20;
+<<<<<<< HEAD
             // 
             // groupBox4
             // 
@@ -242,6 +308,8 @@
             this.cmbTema.Size = new System.Drawing.Size(121, 21);
             this.cmbTema.TabIndex = 0;
             this.cmbTema.SelectedIndexChanged += new System.EventHandler(this.cmbTema_SelectedIndexChanged);
+=======
+>>>>>>> origin/master
             // 
             // config1
             // 
@@ -269,7 +337,10 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+<<<<<<< HEAD
             this.groupBox4.ResumeLayout(false);
+=======
+>>>>>>> origin/master
             this.ResumeLayout(false);
 
         }
@@ -288,7 +359,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+<<<<<<< HEAD
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cmbTema;
+=======
+>>>>>>> origin/master
     }
 }

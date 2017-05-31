@@ -83,6 +83,7 @@ C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Form4
 C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
 C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
 C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
@@ -98,3 +99,5 @@ C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\ob
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
+=======
+>>>>>>> origin/master
