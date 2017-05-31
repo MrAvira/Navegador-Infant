@@ -22,18 +22,12 @@ namespace TemplateTelasTeste {
 
         private void Form2_Load(object sender, EventArgs e) {
             FormBorderStyle = FormBorderStyle.None;
-<<<<<<< HEAD
             
-=======
->>>>>>> origin/master
             foreach (string item in DbClass.getSites(id))
             {
                 comboBox1.Items.Add(item);
             }
-<<<<<<< HEAD
             
-=======
->>>>>>> origin/master
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -69,7 +63,6 @@ namespace TemplateTelasTeste {
 
         private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
-<<<<<<< HEAD
 
         }
 
@@ -84,21 +77,6 @@ namespace TemplateTelasTeste {
             x = comboBox1.ToString();
             MessageBox.Show("OPS, Navegue apenas nos Sites Permitidos");
             webBrowser1.Navigate(new Uri(x));
-=======
-            foreach (string item in DbClass.getSites(id)){
-                Uri uri = new Uri(comboBox1.Text);
-                uri = new Uri(uri.AbsoluteUri);
-                Uri itemUri = new Uri("http://" + item);
-                if(uri == itemUri)
-                {
-                    MessageBox.Show("Igual");
-                }
-                else
-                {
-                    MessageBox.Show("Diferente");
-                }
-            }
->>>>>>> origin/master
         }
     }
 }

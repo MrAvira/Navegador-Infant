@@ -63,7 +63,6 @@ namespace TemplateTelasTeste {
                     listBox1.Items.Add(item);
                     listBox2.Items.Add(item);
                 }
-<<<<<<< HEAD
             }
         }
 
@@ -97,18 +96,7 @@ namespace TemplateTelasTeste {
             if (cmbTema.SelectedIndex == 0)
             {
                
-=======
->>>>>>> origin/master
             }
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e) {
-
         }
     }
 }

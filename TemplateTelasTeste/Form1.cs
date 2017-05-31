@@ -12,10 +12,7 @@ namespace TemplateTelasTeste {
     public partial class principal : Form {
         string usuario;
         string senha;
-<<<<<<< HEAD
         int id;
-=======
->>>>>>> origin/master
         navegador nav;
         config1 config = new config1();
         int x;
@@ -24,14 +21,10 @@ namespace TemplateTelasTeste {
             InitializeComponent();
             this.usuario = usuario;
             this.senha = senha;
-<<<<<<< HEAD
             id = DbClass.getId(usuario);
             nav = new navegador(usuario, senha);
             x = int.Parse(DbClass.getConfig(usuario)[9]);
             timer1.Start();
-=======
-            nav = new navegador(usuario, senha);
->>>>>>> origin/master
         }
 
         private void Template_Load(object sender, EventArgs e) {
