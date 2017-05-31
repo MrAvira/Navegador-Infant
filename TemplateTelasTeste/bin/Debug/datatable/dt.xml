@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <usuarios>
+    <ID>0</ID>
+    <USUARIO>admin</USUARIO>
+    <SENHA>admin</SENHA>
+    <TIPO>0</TIPO>
+  </usuarios>
+</DocumentElement>

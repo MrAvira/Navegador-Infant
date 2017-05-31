@@ -25,10 +25,14 @@ namespace TemplateTelasTeste {
         }
 
         private void Form3_Load(object sender, EventArgs e) {
+            
             FormBorderStyle = FormBorderStyle.None;
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
             foreach (string item in DbClass.getUsers()) {
                 listBox1.Items.Add(item);
                 listBox2.Items.Add(item);
+
             }
         }
 
@@ -37,12 +41,12 @@ namespace TemplateTelasTeste {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            DialogResult confirm = MessageBox.Show("Deseja continuar?", "Deseja excluir o Usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            DialogResult confirm = MessageBox.Show("Deseja continuar?", "Deseja excluir o Usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (confirm.ToString().ToUpper() == "YES") {
                 DbClass.deletUser(listBox1.Text);
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
-                foreach (string item in DbClass.getUsers()) {
+                foreach (string item in DbClass.getUsers()){
                     listBox1.Items.Add(item);
                     listBox2.Items.Add(item);
                 }
@@ -53,6 +57,45 @@ namespace TemplateTelasTeste {
             if (!listBox2.Text.Equals("")) {
                 config2 formc2 = new config2(listBox2.Text);
                 formc2.ShowDialog();
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                foreach (string item in DbClass.getUsers()) {
+                    listBox1.Items.Add(item);
+                    listBox2.Items.Add(item);
+                }
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e){
+            if (e.Control && e.KeyValue == 86){
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+
+        }
+
+        private void cmbTema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTema.SelectedIndex == 0)
+            {
+               
             }
         }
     }

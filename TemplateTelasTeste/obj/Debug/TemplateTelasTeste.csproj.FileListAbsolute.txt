@@ -38,3 +38,63 @@ C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\Da
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\Database1_log.ldf
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config1.resources
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\Database1.mdf
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\Database1_log.ldf
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.pdb
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csprojResolveAssemblyReference.cache
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.principal.resources
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.navegador.resources
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config1.resources
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Form4.resources
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
+C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\Database1.mdf
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\Database1_log.ldf
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.pdb
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.principal.resources
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.navegador.resources
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config1.resources
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Form4.resources
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
+C:\Users\flavi\Downloads\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csprojResolveAssemblyReference.cache
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\Database1.mdf
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\Database1_log.ldf
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.pdb
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csprojResolveAssemblyReference.cache
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.principal.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.navegador.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config1.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Form4.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\Database1.mdf
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\Database1_log.ldf
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.pdb
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csprojResolveAssemblyReference.cache
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.principal.resources
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.navegador.resources
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config1.resources
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Form4.resources
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
+C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache

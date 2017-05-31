@@ -57,6 +57,7 @@ namespace TemplateTelasTeste {
             foreach (string item in DbClass.getSites(DbClass.getId(usuario))) {
                 listBox1.Items.Add(item);
             }
+            comboBox1.SelectedItem = configs[8].ToString();
         }
 
         private void button4_Click(object sender, EventArgs e) {
@@ -64,7 +65,8 @@ namespace TemplateTelasTeste {
         }
 
         private void button3_Click(object sender, EventArgs e) {
-            string[] configs = new string[8];
+
+            string[] configs = new string[9];
             configs[0] = SEGUNDA.Checked.ToString();
             configs[1] = TERCA.Checked.ToString();
             configs[2] = QUARTA.Checked.ToString();
@@ -79,7 +81,39 @@ namespace TemplateTelasTeste {
             }else if (radioButton3.Checked) {
                 configs[7] = radioButton3.Text;
             }
+            configs[8] = comboBox1.SelectedItem.ToString();
             DbClass.setConfig(id, configs);
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e) {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e) {
+            if(textBox2.Text == textBox3.Text) {
+                DbClass.updatePass(id, textBox3.Text);
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e){
+            if (e.Control && e.KeyValue == 86){
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

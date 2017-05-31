@@ -24,53 +24,34 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(navegador));
-            this.btnIrNav = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnIrNav = new System.Windows.Forms.Button();
             this.btnVoltarNav = new System.Windows.Forms.Button();
             this.btnHomeNav = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnIrNav
-            // 
-            this.btnIrNav.AccessibleDescription = "Ir";
-            this.btnIrNav.AccessibleName = "Ir";
-            this.btnIrNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.btnIrNav.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIrNav.BackgroundImage")));
-            this.btnIrNav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnIrNav.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnIrNav.FlatAppearance.BorderSize = 0;
-            this.btnIrNav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
-            this.btnIrNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIrNav.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrNav.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnIrNav.Location = new System.Drawing.Point(771, 0);
-            this.btnIrNav.Name = "btnIrNav";
-            this.btnIrNav.Size = new System.Drawing.Size(39, 39);
-            this.btnIrNav.TabIndex = 3;
-            this.btnIrNav.UseVisualStyleBackColor = true;
-            this.btnIrNav.Click += new System.EventHandler(this.button1_Click);
             // 
             // webBrowser1
             // 
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(0, 45);
+            this.webBrowser1.Location = new System.Drawing.Point(3, 39);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(849, 420);
+            this.webBrowser1.Size = new System.Drawing.Size(849, 435);
             this.webBrowser1.TabIndex = 5;
             this.webBrowser1.Url = new System.Uri("http://www.google.com", System.UriKind.Absolute);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            this.webBrowser1.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.webBrowser1_Navigating);
             // 
             // panel2
             // 
             this.panel2.AutoSize = true;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(16)))), ((int)(((byte)(50)))));
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.btnIrNav);
             this.panel2.Controls.Add(this.btnVoltarNav);
@@ -88,20 +69,39 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "www.google.com",
-            "www.fatecpg.com.br",
-            "www.youtube.com"});
-            this.comboBox1.Location = new System.Drawing.Point(45, 12);
+            this.comboBox1.Location = new System.Drawing.Point(58, 12);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(720, 24);
+            this.comboBox1.Size = new System.Drawing.Size(707, 24);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            // 
+            // btnIrNav
+            // 
+            this.btnIrNav.AccessibleDescription = "Ir";
+            this.btnIrNav.AccessibleName = "Ir";
+            this.btnIrNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.btnIrNav.BackColor = System.Drawing.Color.Transparent;
+            this.btnIrNav.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIrNav.BackgroundImage")));
+            this.btnIrNav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnIrNav.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnIrNav.FlatAppearance.BorderSize = 0;
+            this.btnIrNav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
+            this.btnIrNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIrNav.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIrNav.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnIrNav.Location = new System.Drawing.Point(771, 0);
+            this.btnIrNav.Name = "btnIrNav";
+            this.btnIrNav.Size = new System.Drawing.Size(39, 39);
+            this.btnIrNav.TabIndex = 3;
+            this.btnIrNav.UseVisualStyleBackColor = false;
+            this.btnIrNav.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnVoltarNav
             // 
             this.btnVoltarNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.btnVoltarNav.BackColor = System.Drawing.Color.Transparent;
             this.btnVoltarNav.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltarNav.BackgroundImage")));
-            this.btnVoltarNav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVoltarNav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVoltarNav.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnVoltarNav.FlatAppearance.BorderSize = 0;
             this.btnVoltarNav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
@@ -112,12 +112,13 @@
             this.btnVoltarNav.Name = "btnVoltarNav";
             this.btnVoltarNav.Size = new System.Drawing.Size(39, 39);
             this.btnVoltarNav.TabIndex = 2;
-            this.btnVoltarNav.UseVisualStyleBackColor = true;
+            this.btnVoltarNav.UseVisualStyleBackColor = false;
             this.btnVoltarNav.Click += new System.EventHandler(this.btnVoltarNav_Click);
             // 
             // btnHomeNav
             // 
             this.btnHomeNav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.btnHomeNav.BackColor = System.Drawing.Color.Transparent;
             this.btnHomeNav.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHomeNav.BackgroundImage")));
             this.btnHomeNav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnHomeNav.Dock = System.Windows.Forms.DockStyle.Right;
@@ -130,7 +131,7 @@
             this.btnHomeNav.Name = "btnHomeNav";
             this.btnHomeNav.Size = new System.Drawing.Size(39, 39);
             this.btnHomeNav.TabIndex = 6;
-            this.btnHomeNav.UseVisualStyleBackColor = true;
+            this.btnHomeNav.UseVisualStyleBackColor = false;
             this.btnHomeNav.Click += new System.EventHandler(this.btnHomeNav_Click);
             // 
             // navegador
@@ -138,8 +139,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(16)))), ((int)(((byte)(50)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(849, 465);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(849, 476);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.webBrowser1);
