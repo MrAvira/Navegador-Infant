@@ -9,18 +9,21 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
+using System.Data.SQLite;
 
 namespace TemplateTelasTeste {
     public static class DbClass {
-        //private static SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
-        private static SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Navegador_flavioVersion\TemplateTelasTeste\Database1.mdf;Integrated Security=True;Connect Timeout=30");
-        private static SqlCommand cmd;
-        private static SqlDataReader reader;
-        
-        public static int getId(string usuario) {
+        //private static SQLiteConnection cn = new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+        //private static SQLiteConnection cn = new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Navegador_flavioVersion\TemplateTelasTeste\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+        //private static SQLiteConnection cn = new SQLiteConnection("Data Source = DataBase.db");
+        //private static SQLiteCommand cmd;
+        //private static SQLiteDataReader reader;
+        private static string path = "Data Source = DataBase.db";
+
+        /* public static int getId(string usuario) {
             int num;
             try {
-                cmd = new SqlCommand("SELECT [Id] FROM [dbo].[usuarios] WHERE [usuario] = @usuario", cn);
+                cmd = new SQLiteCommand("SELECT id FROM Usuarios WHERE usuario = @usuario", cn);
                 cmd.Parameters.AddWithValue("@usuario", usuario);
                 cn.Open();
                 reader = cmd.ExecuteReader();
@@ -33,17 +36,29 @@ namespace TemplateTelasTeste {
                 return -1;
             }
             catch (Exception ex) {
-                MessageBox.Show("" + ex);
                 cn.Close();
+                MessageBox.Show("" + ex);
                 return -1;
             }
         }
+        */
 
+        public static int getId(string usuario) {
+            int ret = -1;
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("SELECT id FROM Usuarios WHERE usuario = @usuario", conn)) {
+                    comm.Parameters.AddWithValue("@usuario", usuario);
+                    conn.Open();
+                    ret = Convert.ToInt32(comm.ExecuteScalar());
+                }
+            }
+            return ret;
+        }
 
-        public static string getPass(int id) {
+        /*public static string getPass(int id) {
             string pass;
             try {
-                cmd = new SqlCommand("SELECT [senha] FROM [usuarios] WHERE [Id] = @Id", cn);
+                cmd = new SQLiteCommand("SELECT [senha] FROM [usuarios] WHERE [Id] = @Id", cn);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cn.Open();
                 reader = cmd.ExecuteReader();
@@ -60,11 +75,23 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return "Erro";
             }
+        }*/
+
+        public static string getPass(int id) {
+            string pass = null;
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("SELECT senha FROM usuario WHERE id = @Id", conn)) {
+                    comm.Parameters.AddWithValue("@Id", id);
+                    conn.Open();
+                    pass = Convert.ToString(comm.ExecuteScalar());
+                }
+            }
+            return pass;
         }
 
-        public static bool VerifyUser(string usuario, string senha) {
+        /*public static bool VerifyUser(string usuario, string senha) {
             try {
-                cmd = new SqlCommand("SELECT [Id] FROM [dbo].[usuarios] WHERE [usuario] = @usuario AND [senha] = @senha", cn);
+                cmd = new SQLiteCommand("SELECT [Id] FROM [usuarios] WHERE [usuario] = @usuario AND [senha] = @senha", cn);
                 cmd.Parameters.AddWithValue("@usuario", usuario);
                 cmd.Parameters.AddWithValue("@senha", senha);
                 cn.Open();
@@ -81,13 +108,27 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return false;
             }
+        } */
+
+        public static bool VerifyUser(string usuario, string senha) {
+            bool ret = false;
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("SELECT 'True' FROM usuarios WHERE usuario = @usuario AND senha = @senha", conn)) {
+                    comm.Parameters.AddWithValue("@usuario", usuario);
+                    comm.Parameters.AddWithValue("@senha", senha);
+                    conn.Open();
+                    ret = Convert.ToBoolean(comm.ExecuteScalar());
+                    //MessageBox.Show("" + ret.ToString());
+                }
+                return ret;
+            }
         }
 
-        public static string[] getUsers() {
+        /* public static string[] getUsers() {
             List<string> arrayDi = new List<string>();
             string[] ret = new string[]{};
             try {
-                cmd = new SqlCommand("SELECT [usuario] FROM [usuarios]", cn);
+                cmd = new SQLiteCommand("SELECT [usuario] FROM [usuarios]", cn);
                 cn.Open();
                 reader = cmd.ExecuteReader();
                 while (reader.Read()) {
@@ -105,30 +146,64 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return ret = new string[]{"sem dados"};
             }
+        } */
+
+        public static string[] getUsers() {
+            List<string> arrayDi = new List<string>();
+            string[] ret = new string[] { "Sem Dados" };
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("SELECT [usuario] FROM [usuarios]", conn)) {
+                    conn.Open();
+                    using (SQLiteDataReader readerr = comm.ExecuteReader()) {
+                        while (readerr.Read()) {
+                            arrayDi.Add(readerr["usuario"].ToString());
+                        }
+                    }
+                }
+            }
+            ret = arrayDi.ToArray();
+            return ret;
         }
 
-        public static bool setUser(string usuario, string senha) {
+       /* public static bool setUser(string usuario, string senha, string admin) {
             try {
-                cmd = new SqlCommand("INSERT INTO [Usuarios](usuario,senha) VALUES (@usuario,@senha)", cn);
+                cmd = new SQLiteCommand("INSERT INTO [Usuarios](usuario,senha,NivelU) VALUES (@usuario,@senha,@admin)", cn);
                 cmd.Parameters.AddWithValue("@usuario", usuario);
                 cmd.Parameters.AddWithValue("@senha", senha);
+                cmd.Parameters.AddWithValue("@admin", admin);
                 cn.Open();
-                if(cmd.ExecuteNonQuery() != 0) {
+                if (cmd.ExecuteNonQuery() != 0) {
                     MessageBox.Show("Usuario Criado com sucesso!!");
                 }
                 cn.Close();
                 return true;
             }
             catch (Exception) {
-                MessageBox.Show( "Usuário já existe!","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Usuário já existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cn.Close();
                 return false;
             }
+        }*/
+
+        public static bool setUser(string usuario, string senha, string admin) {
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("INSERT INTO [Usuarios](usuario,senha,NivelU) VALUES (@usuario,@senha,@admin)", conn)) {
+                    comm.Parameters.AddWithValue("@admin",admin);
+                    comm.Parameters.AddWithValue("@senha",senha);
+                    comm.Parameters.AddWithValue("@usuario",usuario);
+                    conn.Open();
+                    if (comm.ExecuteNonQuery() != 0) {
+                        MessageBox.Show("Usuario Criado com sucesso!!");
+                        return true;
+                    }
+                    return false;
+                }
+            }
         }
-       
-        public static bool deletUser(string usuario) {
+
+        /*public static bool deletUser(string usuario) {
             try {
-                cmd = new SqlCommand("DELETE FROM [usuarios] WHERE usuario = @usuario", cn);
+                cmd = new SQLiteCommand("DELETE FROM [usuarios] WHERE usuario = @usuario", cn);
                 cmd.Parameters.AddWithValue("@usuario", usuario);
                 cn.Open();
                 if (cmd.ExecuteNonQuery() != 0) {
@@ -141,17 +216,34 @@ namespace TemplateTelasTeste {
                     cn.Close();
                     return false;
                 }
-                
+
             }
             catch (Exception ex) {
                 MessageBox.Show("" + ex);
                 cn.Close();
                 return false;
             }
+        }*/
+
+        public static bool deletUser(string usuario) {
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("DELETE FROM [usuarios] WHERE usuario = @usuario", conn)) {
+                    comm.Parameters.AddWithValue("@usuario", usuario);
+                    conn.Open();
+                    if (comm.ExecuteNonQuery() != 0) {
+                        MessageBox.Show("Usuario Excluido com Sucesso!!");
+                        return true;
+                    }
+                    else {
+                        MessageBox.Show("Usuario não existente ou não encontrado!! ");
+                        return false;
+                    }
+
+                }
+            }
         }
 
-        public static DateTime GetNetworkTime()
-        {
+        public static DateTime GetNetworkTime() {
             //Servidor nacional para melhor latência
             const string ntpServer = "a.ntp.br";
 
@@ -200,22 +292,21 @@ namespace TemplateTelasTeste {
         }
 
         // stackoverflow.com/a/3294698/162671
-        static uint SwapEndianness(ulong x)
-        {
+        static uint SwapEndianness(ulong x) {
             return (uint)(((x & 0x000000ff) << 24) +
                            ((x & 0x0000ff00) << 8) +
                            ((x & 0x00ff0000) >> 8) +
                            ((x & 0xff000000) >> 24));
         }
 
-        public static string[] getday(string usuario){
+       /* public static string[] getday(string usuario) {
             //TODO SELECT * FROM Config WHERE Id = " + getId(usuario);
             string[] ret = new string[] { };
-            try{
-                cmd = new SqlCommand("SELECT * FROM Config WHERE Id = " + getId(usuario), cn);
+            try {
+                cmd = new SQLiteCommand("SELECT * FROM Config WHERE Id = " + getId(usuario), cn);
                 cn.Open();
                 reader = cmd.ExecuteReader();
-                while (reader.Read()){
+                while (reader.Read()) {
                     ret = new string[] {
                         reader["Seg"].ToString(),
                         reader["Ter"].ToString(),
@@ -229,7 +320,7 @@ namespace TemplateTelasTeste {
                     };
                 }
                 cn.Close();
-                if (ret.Count() == 0){
+                if (ret.Count() == 0) {
                     return new string[] { "sem Info" };
                 }
 
@@ -239,63 +330,131 @@ namespace TemplateTelasTeste {
                 //MessageBox.Show(ret[1]);
                 //MessageBox.Show(dataservidor.DayOfWeek.ToString());
 
-                if( ret[0] == "True" && dataservidor.DayOfWeek.ToString() == "Monday" ||
+                if (ret[0] == "True" && dataservidor.DayOfWeek.ToString() == "Monday" ||
                     ret[1] == "True" && dataservidor.DayOfWeek.ToString() == "Tuesday" ||
                     ret[2] == "True" && dataservidor.DayOfWeek.ToString() == "Wednesday" ||
                     ret[3] == "True" && dataservidor.DayOfWeek.ToString() == "Thursday" ||
                     ret[4] == "True" && dataservidor.DayOfWeek.ToString() == "Friday" ||
                     ret[5] == "True" && dataservidor.DayOfWeek.ToString() == "Saturday" ||
-                    ret[6] == "True" && dataservidor.DayOfWeek.ToString() == "Sunday"){
-                    
+                    ret[6] == "True" && dataservidor.DayOfWeek.ToString() == "Sunday") {
+
 
                 }
-                else{
-                    if (dataservidor.DayOfWeek.ToString() == "Monday"){ 
-                    MessageBox.Show("Hoje é Segunda-Feira, você não pode navegar hoje!");
-                    Application.Restart();
+                else {
+                    if (dataservidor.DayOfWeek.ToString() == "Monday") {
+                        MessageBox.Show("Hoje é Segunda-Feira, você não pode navegar hoje!");
+                        Application.Restart();
                     }
-                    if (dataservidor.DayOfWeek.ToString() == "Tuesday"){
+                    if (dataservidor.DayOfWeek.ToString() == "Tuesday") {
                         MessageBox.Show("Hoje é Terça-Feira, você não pode navegar hoje!");
                         Application.Restart();
                     }
-                    if (dataservidor.DayOfWeek.ToString() == "Wednesday"){
+                    if (dataservidor.DayOfWeek.ToString() == "Wednesday") {
                         MessageBox.Show("Hoje é Quarta-Feira, você não pode navegar hoje!");
                         Application.Restart();
                     }
-                    if (dataservidor.DayOfWeek.ToString() == "Thursday"){
+                    if (dataservidor.DayOfWeek.ToString() == "Thursday") {
                         MessageBox.Show("Hoje é Quinta-Feira, você não pode navegar hoje!");
                         Application.Restart();
                     }
-                    if (dataservidor.DayOfWeek.ToString() == "Friday"){
+                    if (dataservidor.DayOfWeek.ToString() == "Friday") {
                         MessageBox.Show("Hoje é Sexta-Feira, você não pode navegar hoje!");
                         Application.Restart();
                     }
-                    if (dataservidor.DayOfWeek.ToString() == "Saturday"){
+                    if (dataservidor.DayOfWeek.ToString() == "Saturday") {
                         MessageBox.Show("Hoje é Sábado, você não pode navegar hoje!");
                         Application.Restart();
                     }
-                    if (dataservidor.DayOfWeek.ToString() == "Sunday"){
+                    if (dataservidor.DayOfWeek.ToString() == "Sunday") {
                         MessageBox.Show("Hoje é Domingo, você não pode navegar hoje!");
                         Application.Restart();
                     }
-                    
+
                 }
 
                 return ret;
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show("" + ex);
                 cn.Close();
                 return new string[] { "erro" };
             }
+        } */
+
+        public static string[] getday(string usuario) {
+            string[] ret = new string[] { };
+            DateTime dataservidor = GetNetworkTime();
+            //MessageBox.Show("" + (int)dataservidor.DayOfWeek);
+            string dia = DateTime.Now.DayOfWeek.ToString();
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("DELETE FROM [usuarios] WHERE usuario = @usuario", conn)) {
+                    comm.Parameters.AddWithValue("@usuario", usuario);
+                    conn.Open();
+                    using (SQLiteDataReader readerr = comm.ExecuteReader()) {
+                        while (readerr.Read()) {
+                            ret = new string[] {
+                            readerr["Seg"].ToString(),
+                            readerr["Ter"].ToString(),
+                            readerr["Qua"].ToString(),
+                            readerr["Qui"].ToString(),
+                            readerr["Sex"].ToString(),
+                            readerr["Sab"].ToString(),
+                            readerr["Dom"].ToString(),
+                            readerr["NiveQ"].ToString(),
+                            readerr["usado"].ToString(),
+                            };
+                        }
+                    }
+                }
+            }
+            if (ret[0] == "True" && dataservidor.DayOfWeek.ToString() == "Monday" ||
+                    ret[1] == "True" && dataservidor.DayOfWeek.ToString() == "Tuesday" ||
+                    ret[2] == "True" && dataservidor.DayOfWeek.ToString() == "Wednesday" ||
+                    ret[3] == "True" && dataservidor.DayOfWeek.ToString() == "Thursday" ||
+                    ret[4] == "True" && dataservidor.DayOfWeek.ToString() == "Friday" ||
+                    ret[5] == "True" && dataservidor.DayOfWeek.ToString() == "Saturday" ||
+                    ret[6] == "True" && dataservidor.DayOfWeek.ToString() == "Sunday") 
+            { }
+            else {
+                if (dataservidor.DayOfWeek.ToString() == "Monday") {
+                    MessageBox.Show("Hoje é Segunda-Feira, você não pode navegar hoje!");
+                    Application.Restart();
+                }
+                if (dataservidor.DayOfWeek.ToString() == "Tuesday") {
+                    MessageBox.Show("Hoje é Terça-Feira, você não pode navegar hoje!");
+                    Application.Restart();
+                }
+                if (dataservidor.DayOfWeek.ToString() == "Wednesday") {
+                    MessageBox.Show("Hoje é Quarta-Feira, você não pode navegar hoje!");
+                    Application.Restart();
+                }
+                if (dataservidor.DayOfWeek.ToString() == "Thursday") {
+                    MessageBox.Show("Hoje é Quinta-Feira, você não pode navegar hoje!");
+                    Application.Restart();
+                }
+                if (dataservidor.DayOfWeek.ToString() == "Friday") {
+                    MessageBox.Show("Hoje é Sexta-Feira, você não pode navegar hoje!");
+                    Application.Restart();
+                }
+                if (dataservidor.DayOfWeek.ToString() == "Saturday") {
+                    MessageBox.Show("Hoje é Sábado, você não pode navegar hoje!");
+                    Application.Restart();
+                }
+                if (dataservidor.DayOfWeek.ToString() == "Sunday") {
+                    MessageBox.Show("Hoje é Domingo, você não pode navegar hoje!");
+                    Application.Restart();
+                }
+
+            }
+
+            return ret;
         }
-        
-        public static string[] getConfig(string usuario) {
+
+        /* public static string[] getConfig(int id) {
             //TODO SELECT * FROM Config WHERE Id = " + getId(usuario);
-            string[] ret = new string[]{};
+            string[] ret = new string[] { };
             try {
-                cmd = new SqlCommand("SELECT * FROM Config WHERE Id = " + getId(usuario), cn);
+                cmd = new SQLiteCommand("SELECT * FROM Config WHERE Id = " + id, cn);
                 cn.Open();
                 reader = cmd.ExecuteReader();
                 while (reader.Read()) {
@@ -325,11 +484,41 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return new string[] { "erro" };
             }
+        } */
+
+        public static string[] getConfig(int id) {
+            string[] ret = new string[] { };
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using(SQLiteCommand comm = new SQLiteCommand("SELECT * FROM Config WHERE Id = " + id, conn)) {
+                    conn.Open();
+                    using (SQLiteDataReader readerr = comm.ExecuteReader()) {
+                        while (readerr.Read()) {
+                            ret = new string[] {
+                            readerr["Seg"].ToString(),
+                            readerr["Ter"].ToString(),
+                            readerr["Qua"].ToString(),
+                            readerr["Qui"].ToString(),
+                            readerr["Sex"].ToString(),
+                            readerr["Sab"].ToString(),
+                            readerr["Dom"].ToString(),
+                            readerr["NiveQ"].ToString(),
+                            readerr["tempo"].ToString(),
+                            readerr["TempUsado"].ToString()
+                            };
+                        }
+                    }
+                }
+
+            }
+            if (ret.Count() == 0) {
+                return new string[] { "sem Info" };
+            }
+            return ret;
         }
 
-        public static bool setSite(int id, string site) {
+       /* public static bool setSite(int id, string site) {
             try {
-                cmd = new SqlCommand("INSERT INTO [Sites](Id,NomeSi) VALUES (@Id,@NomeSi)", cn);
+                cmd = new SQLiteCommand("INSERT INTO [Sites](Id,NomeSi) VALUES (@Id,@NomeSi)", cn);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cmd.Parameters.AddWithValue("@NomeSi", site);
                 cn.Open();
@@ -342,11 +531,24 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return false;
             }
+        } */
+
+        public static bool setSite(int id, string site) {
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("INSERT INTO [Sites](Id,NomeSi) VALUES (@Id,@NomeSi)", conn)) {
+                    comm.Parameters.AddWithValue("@Id", id);
+                    comm.Parameters.AddWithValue("@NomeSi", site);
+                    conn.Open();
+                    comm.ExecuteNonQuery();
+                    return true;
+                }
+            }
         }
 
-        public static bool setDia(int id){
+        /* public static bool setDia(int id){
             try{
-                cmd = new SqlCommand("update [Config] set [Usado] = getdate() WHERE Id = @Id", cn);
+                // cmd = new SQLiteCommand("update [Config] set [Usado] = getdate() WHERE Id = @Id", cn);
+                cmd = new SQLiteCommand("update [Config] set [Usado] = datetime('now') WHERE Id = @Id", cn);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -358,37 +560,70 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return false;
             }
+        } */
+
+        public static bool setDia(int id) {
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("update [Config] set [Usado] = datetime('now') WHERE Id = @Id", conn)) {
+                    comm.Parameters.AddWithValue("@Id", id);
+                    conn.Open();
+                    if (comm.ExecuteNonQuery() != 0) {
+                        return true;
+                    }
+                    return false;
+                }
+            }
         }
 
-        public static string getday(int id){
-            try{
+       /* public static string getday(int id) {
+            try {
                 string ret = null;
-                cmd = new SqlCommand("SELECT [Usado] FROM [Config] WHERE Id = @Id", cn);
+                //cmd = new SQLiteCommand("SELECT [Usado] FROM [Config] WHERE Id = @Id", cn);
+                cmd = new SQLiteCommand("SELECT strftime('%d/%m/%Y %H:%M:%S', usado) as usado FROM Config WHERE Id = @Id; ", cn);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cn.Open();
                 reader = cmd.ExecuteReader();
-                while (reader.Read()){
-                    ret = reader["Usado"].ToString();
+                while (reader.Read()) {
+                    ret = reader["usado"].ToString();
                 }
-                if(ret != null) {
+                if (ret != null) {
                     cn.Close();
                     return ret;
                 }
                 cn.Close();
-                    return "sem dados";
+                return "sem dados";
             }
-            catch (Exception ex){
+            catch (Exception ex) {
                 MessageBox.Show("" + ex);
                 cn.Close();
                 return "sem dados";
             }
+        } */
+
+        public static string getday(int id) {
+            string ret = null;
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("SELECT strftime('%d/%m/%Y %H:%M:%S', usado) as usado FROM Config WHERE Id = @Id",conn)) {
+                    comm.Parameters.AddWithValue("@Id", id);
+                    conn.Open();
+                    using (SQLiteDataReader readerr = comm.ExecuteReader()) {
+                        while (readerr.Read()) {
+                            ret = readerr["usado"].ToString();
+                        }
+                    }
+                }
+            }
+            if (ret != null) {
+                return ret;
+            }
+            return "sem dados";
         }
 
-        public static string[] getSites(int id) {
+        /* public static string[] getSites(int id) {
             List<string> arrayDi = new List<string>();
             string[] ret = new string[] { };
             try {
-                cmd = new SqlCommand("SELECT [NomeSi] FROM [Sites] WHERE Id = @Id", cn);
+                cmd = new SQLiteCommand("SELECT [NomeSi] FROM [Sites] WHERE Id = @Id", cn);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cn.Open();
                 reader = cmd.ExecuteReader();
@@ -407,11 +642,30 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return ret = new string[] { "sem dados" };
             }
+        } */
+
+        public static string[] getSites(int id) {
+            List<string> arrayDi = new List<string>();
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("SELECT[NomeSi] FROM[Sites] WHERE Id = @Id", conn)) {
+                    comm.Parameters.AddWithValue("@Id", id);
+                    conn.Open();
+                    using(SQLiteDataReader readerr = comm.ExecuteReader()) {
+                        while (readerr.Read()) {
+                            arrayDi.Add(readerr["NomeSi"].ToString());
+                        }
+                    }
+                }
+            }
+            if (arrayDi.ToArray().Count() == 0) {
+                return new string[] { "sem dados" };
+            }
+            return arrayDi.ToArray();
         }
 
-        public static bool deletSite(int id, string site) {
+        /* public static bool deletSite(int id, string site) {
             try {
-                cmd = new SqlCommand("DELETE FROM [Sites] WHERE Id = @Id AND NomeSi = @Site", cn);
+                cmd = new SQLiteCommand("DELETE FROM [Sites] WHERE Id = @Id AND NomeSi = @Site", cn);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cmd.Parameters.AddWithValue("@Site", site);
                 cn.Open();
@@ -424,11 +678,25 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return false;
             }
+        } */
+
+        public static bool deletSite(int id, string site) {
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("DELETE FROM Sites WHERE Id = @Id AND NomeSi = @Site",conn)) {
+                    comm.Parameters.AddWithValue("@Id", id);
+                    comm.Parameters.AddWithValue("@Site", site);
+                    conn.Open();
+                    if (comm.ExecuteNonQuery() != 0) {
+                        return true;
+                    }
+                    return false;
+                }
+            }
         }
 
-        public static bool setConfig(int id, string[] configs) {
+        /* public static bool setConfig(int id, string[] configs) {
             try {
-                cmd = new SqlCommand("UPDATE [Config] SET " +
+                cmd = new SQLiteCommand("UPDATE [Config] SET " +
                     "Seg = @Seg, " +
                     "Ter = @Ter, " +
                     "Qua = @Qua, " +
@@ -460,17 +728,43 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return false;
             }
+        } */
+
+        public static bool setConfig(int id, string[] configs) {
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("UPDATE [Config] SET Seg = @Seg, Ter = @Ter, Qua = @Qua, Qui = @Qui, Sex = @Sex, " +
+                        "Sab = @Sab, Dom = @Dom, NiveQ = @NiveQ, tempo = @tempo WHERE Id = @Id ", conn)) {
+
+                    comm.Parameters.AddWithValue("@Id", id);
+                    comm.Parameters.AddWithValue("@Seg", configs[0]);
+                    comm.Parameters.AddWithValue("@Ter", configs[1]);
+                    comm.Parameters.AddWithValue("@Qua", configs[2]);
+                    comm.Parameters.AddWithValue("@Qui", configs[3]);
+                    comm.Parameters.AddWithValue("@Sex", configs[4]);
+                    comm.Parameters.AddWithValue("@Sab", configs[5]);
+                    comm.Parameters.AddWithValue("@Dom", configs[6]);
+                    comm.Parameters.AddWithValue("@NiveQ", configs[7]);
+                    comm.Parameters.AddWithValue("@tempo", configs[8]);
+
+                    conn.Open();
+                    if (comm.ExecuteNonQuery() != 0) {
+                        MessageBox.Show("Configuração salva com sucesso!!");
+                        return true;
+                    }
+                    return false;
+                }
+            }
         }
 
-        public static bool updatePass(int id, string senhan) {
+        /* public static bool updatePass(int id, string senhan) {
             try {
-                cmd = new SqlCommand("UPDATE [Usuarios] SET senha = @senha WHERE Id = @Id ", cn);
+                cmd = new SQLiteCommand("UPDATE [Usuarios] SET senha = @senha WHERE Id = @Id ", cn);
                 cmd.Parameters.AddWithValue("@senha", senhan);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("Senha alterada com sucesso!", "Sucesso!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Senha alterada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception ex) {
@@ -478,12 +772,27 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return false;
             }
+        } */
+
+        public static bool updatePass(int id, string senha) {
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("UPDATE [Usuarios] SET senha = @senha WHERE Id = @Id ", conn)) {
+                    comm.Parameters.AddWithValue("@Id", id);
+                    comm.Parameters.AddWithValue("@senha", senha);
+                    conn.Open();
+                    if (comm.ExecuteNonQuery() != 0) {
+                        MessageBox.Show("Senha alterada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return true;
+                    }
+                    return false;
+                }
+            }
         }
 
-        public static bool setTempUsed(int id) {
+        /* public static bool setTempUsed(int id) {
             //Override: seta 0 se não for colocado o parametro int
             try {
-                cmd = new SqlCommand("update [Config] set [TempUsado] = 0 WHERE Id = @Id", cn);
+                cmd = new SQLiteCommand("update [Config] set [TempUsado] = 0 WHERE Id = @Id", cn);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -495,12 +804,25 @@ namespace TemplateTelasTeste {
                 cn.Close();
                 return false;
             }
+        } */
+
+        public static bool setTempUsed(int id) {
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("update [Config] set [TempUsado] = 0 WHERE Id = @Id",conn)) {
+                    comm.Parameters.AddWithValue("@Id", id);
+                    conn.Open();
+                    if (comm.ExecuteNonQuery() != 0) {
+                        return true;
+                    }
+                    return false;
+                }
+            }
         }
 
-        public static bool setTempUsed(int id, int temp) {
+        /*public static bool setTempUsed(int id, int temp) {
             //Override: seta um valor se for colocado o parametro int
             try {
-                cmd = new SqlCommand("update [Config] set [TempUsado] = @temp WHERE Id = @Id", cn);
+                cmd = new SQLiteCommand("update [Config] set [TempUsado] = @temp WHERE Id = @Id", cn);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cmd.Parameters.AddWithValue("@temp", temp);
                 cn.Open();
@@ -509,8 +831,29 @@ namespace TemplateTelasTeste {
                 return true;
             }
             catch (Exception ex) {
-                MessageBox.Show("" + ex);
                 cn.Close();
+                MessageBox.Show("" + ex);
+                
+                return false;
+            }
+        }*/
+
+        public static bool setTempUsed(int id, int temp) {
+            try {
+                using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                    using (SQLiteCommand comm = new SQLiteCommand("update [Config] set [TempUsado] = @temp WHERE Id = @Id", conn)) {
+                        comm.Parameters.AddWithValue("@Id", id);
+                        comm.Parameters.AddWithValue("@temp", temp);
+                        conn.Open();
+                        if (comm.ExecuteNonQuery() != 0) {
+                            return true;
+                        }
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show("" + ex);
                 return false;
             }
         }
@@ -526,5 +869,38 @@ namespace TemplateTelasTeste {
             //MessageBox.Show(s.ToString());
             return int.Parse(s.ToString());
         }
+
+        /* public static bool getNivelU(int id) {
+            try {
+                string str;
+                cmd = new SQLiteCommand("SELECT [NivelU] FROM [usuarios] WHERE [id] = @id", cn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                reader = cmd.ExecuteReader();
+                while (reader.Read()) {
+                    str = reader["NivelU"].ToString();
+                    cn.Close();
+                    return bool.Parse(str);
+                }
+                cn.Close();
+                return false;
+            }
+            catch (Exception ex) {
+                MessageBox.Show("" + ex);
+                cn.Close();
+                return false;
+            }
+        } */
+
+        public static bool getNivelU(int id){
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("SELECT [NivelU] FROM [usuarios] WHERE [id] = @id", conn)) {
+                    comm.Parameters.AddWithValue("@Id", id);
+                    conn.Open();
+                    return bool.Parse(Convert.ToString(comm.ExecuteScalar()));
+                }
+            }
+        }
     }
+
 }

@@ -22,22 +22,6 @@ C:\Users\WIN\Desktop\TemplateTelasTeste\TemplateTelasTeste\obj\Debug\TemplateTel
 C:\Users\WIN\Desktop\TemplateTelasTeste\NAVEGADOR\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
 C:\Users\WIN\Desktop\TemplateTelasTeste\NAVEGADOR\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
 C:\Users\WIN\Desktop\TemplateTelasTeste\NAVEGADOR\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.pdb
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csprojResolveAssemblyReference.cache
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.navegador.resources
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\MetroFramework.dll
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.principal.resources
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Form4.resources
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\Database1.mdf
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\Database1_log.ldf
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config1.resources
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
 C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
 C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
 C:\Users\tomy1\Desktop\Versoes Navegador\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
@@ -76,11 +60,6 @@ C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\Database1_log.ldf
 C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe
 C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.pdb
 C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csprojResolveAssemblyReference.cache
-C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.principal.resources
-C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.navegador.resources
-C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config1.resources
-C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Form4.resources
-C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
 C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
 C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
@@ -98,3 +77,40 @@ C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\ob
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.config2.resources
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
 C:\Users\tomy1\Desktop\NavKids (1)\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormPrincipal.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormNavegador.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormConfigs.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormLogin.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormConfigUser.resources
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\DataBase.db
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\EntityFramework.dll
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.dll
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\System.Data.SQLite.dll
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\EntityFramework.xml
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.xml
+C:\Navegador_flavioVersion\TemplateTelasTeste\bin\Debug\System.Data.SQLite.xml
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\Database1.mdf
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\Database1_log.ldf
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\DataBase.db
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe.config
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.exe
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\TemplateTelasTeste.pdb
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\EntityFramework.dll
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\System.Data.SQLite.dll
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\EntityFramework.xml
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Debug\System.Data.SQLite.xml
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormPrincipal.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormNavegador.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormConfigs.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormLogin.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.FormConfigUser.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.Properties.Resources.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.csproj.GenerateResource.Cache
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.exe
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\TemplateTelasTeste.pdb
