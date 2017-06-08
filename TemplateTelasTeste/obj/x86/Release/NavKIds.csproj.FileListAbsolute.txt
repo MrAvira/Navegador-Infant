@@ -1,9 +1,4 @@
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\TemplateTelasTeste.exe.config
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\TemplateTelasTeste.exe
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\TemplateTelasTeste.pdb
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\DataBase.db
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\TemplateTelasTeste.exe
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\TemplateTelasTeste.pdb
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\EntityFramework.dll
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\EntityFramework.SqlServer.dll
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\System.Data.SQLite.dll
@@ -18,6 +13,10 @@ C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Rele
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\TemplateTelasTeste.FormConfigs.resources
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\TemplateTelasTeste.FormLogin.resources
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\TemplateTelasTeste.FormConfigUser.resources
-C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\TemplateTelasTeste.Properties.Resources.resources
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\NavKIds.csproj.GenerateResource.Cache
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\NavKids.exe.config
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\NavKids.exe
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\x86\Release\NavKids.pdb
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\NavKids.Properties.Resources.resources
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\NavKids.exe
+C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\x86\Release\NavKids.pdb

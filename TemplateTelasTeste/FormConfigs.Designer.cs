@@ -1,4 +1,4 @@
-﻿namespace TemplateTelasTeste {
+﻿namespace NavKids {
     partial class FormConfigs {
         /// <summary>
         /// Required designer variable.
@@ -255,7 +255,7 @@
             this.cmbTema.TabIndex = 0;
             this.cmbTema.SelectedIndexChanged += new System.EventHandler(this.cmbTema_SelectedIndexChanged);
             // 
-            // FormConfig
+            // FormConfigs
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
@@ -268,7 +268,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(452, 405);
-            this.Name = "FormConfig";
+            this.Name = "FormConfigs";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

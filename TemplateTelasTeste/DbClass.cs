@@ -11,7 +11,7 @@ using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using System.Data.SQLite;
 
-namespace TemplateTelasTeste {
+namespace NavKids {
     public static class DbClass {
         //private static SQLiteConnection cn = new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
         //private static SQLiteConnection cn = new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Navegador_flavioVersion\TemplateTelasTeste\Database1.mdf;Integrated Security=True;Connect Timeout=30");

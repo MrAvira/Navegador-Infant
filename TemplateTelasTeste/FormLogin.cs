@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TemplateTelasTeste {
+namespace NavKids {
     public partial class FormLogin : Form {
         public string usuario;
         public string senha;
@@ -43,7 +43,7 @@ namespace TemplateTelasTeste {
                     if (DbClass.getOnlyNum(configs[8].ToString()) < 30) {
                         // se o tempo maximo foi atingido, então mostra mensagem de tempo max atingido >>
                         if (int.Parse(configs[9]) >= (DbClass.getOnlyNum(configs[8]) * 60 * 60) &&
-                            int.Parse(configs[9]) != 0) {
+                            int.Parse(configs[8]) != 0) {
                             MessageBox.Show("Max Hora");
                             lblLoginError.Text = "Tempo maximo de login diario atingido!!";
                             lblLoginError.Visible = true;
@@ -57,7 +57,7 @@ namespace TemplateTelasTeste {
                     else {
                         // se o tempo maximo foi atingido, então mostra mensagem de tempo max atingido >>
                         if (int.Parse(configs[9]) >= (DbClass.getOnlyNum(configs[8]) * 60) &&
-                            int.Parse(configs[9]) != 0) {
+                            DbClass.getOnlyNum(configs[8]) != 0) {
                             MessageBox.Show("Max Min");
                             lblLoginError.Text = "Tempo maximo de login diario atingido!!";
                             lblLoginError.Visible = true;

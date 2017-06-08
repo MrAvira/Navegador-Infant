@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TemplateTelasTeste {
+namespace NavKids {
     public partial class FormNavegador : Form {
         string usuario;
         string senha;

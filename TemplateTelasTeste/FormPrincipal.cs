@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TemplateTelasTeste {
+namespace NavKids {
     public partial class FormPrincipal : Form {
         string usuario;
         string senha;
@@ -107,15 +107,17 @@ namespace TemplateTelasTeste {
              */
 
             if (DbClass.getOnlyNum(configs[8].ToString()) < 30 && DbClass.getOnlyNum(configs[8].ToString()) != 0) {
+                configs = DbClass.getConfig(id);
                 //MessageBox.Show("" + DbClass.getOnlyNum(configs[8].ToString()) * 60 * 60);
                 if (x >= DbClass.getOnlyNum(configs[8].ToString()) * 60 * 60) {
                     //MessageBox.Show("Seu tempo de Navegação acabou, até logo!");
                     this.Close();
                 }
             }
-            else {
+            else if(DbClass.getOnlyNum(configs[8].ToString()) != 0) {
+                configs = DbClass.getConfig(id);
                 //MessageBox.Show("" + DbClass.getOnlyNum(configs[8].ToString()) * 60);
-                if (x >= DbClass.getOnlyNum(configs[8].ToString()) * 60 && DbClass.getOnlyNum(configs[8].ToString()) != 0) {
+                if (x >= DbClass.getOnlyNum(configs[8].ToString()) * 60) {
                     //MessageBox.Show("Seu tempo de Navegação acabou, até logo!");
                     this.Close();
                 }

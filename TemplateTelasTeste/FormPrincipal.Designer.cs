@@ -1,4 +1,4 @@
-﻿namespace TemplateTelasTeste {
+﻿namespace NavKids {
     partial class FormPrincipal {
         /// <summary>
         /// Required designer variable.
