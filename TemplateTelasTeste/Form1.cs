@@ -105,14 +105,14 @@ namespace TemplateTelasTeste {
                 MessageBox.Show("" + DbClass.getOnlyNum(configs[8].ToString()) * 60 * 60);
                 if (x >= DbClass.getOnlyNum(configs[8].ToString()) * 60 * 60) {
                     MessageBox.Show("Seu tempo de Navegação acabou, até logo!");
-                    //this.Close();
+                    this.Close();
                 }
             }
             else {
                 MessageBox.Show("" + DbClass.getOnlyNum(configs[8].ToString()) * 60);
                 if (x >= DbClass.getOnlyNum(configs[8].ToString()) * 60) {
                     MessageBox.Show("Seu tempo de Navegação acabou, até logo!");
-                    //this.Close();
+                    this.Close();
                 }
             }
             
