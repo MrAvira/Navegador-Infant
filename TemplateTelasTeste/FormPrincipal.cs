@@ -135,5 +135,12 @@ namespace NavKids {
             } */
             
         }
+
+        private void btnOption3_Click(object sender, EventArgs e) {
+            timer1.Stop();
+            FormJogo jogo = new FormJogo(id,configs[7]);
+            jogo.ShowDialog();
+            timer1.Start();
+        }
     }
 }

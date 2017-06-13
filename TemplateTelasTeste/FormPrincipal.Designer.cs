@@ -64,7 +64,7 @@
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnLogout.ForeColor = System.Drawing.Color.Honeydew;
             this.btnLogout.Location = new System.Drawing.Point(0, 300);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(280, 46);
             this.btnLogout.TabIndex = 4;
@@ -84,7 +84,7 @@
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(51, 46);
             this.btnMenu.TabIndex = 4;
@@ -103,13 +103,14 @@
             this.btnOption3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnOption3.ForeColor = System.Drawing.Color.Honeydew;
             this.btnOption3.Location = new System.Drawing.Point(0, 194);
-            this.btnOption3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOption3.Margin = new System.Windows.Forms.Padding(4);
             this.btnOption3.Name = "btnOption3";
             this.btnOption3.Size = new System.Drawing.Size(280, 46);
             this.btnOption3.TabIndex = 2;
             this.btnOption3.Text = "             Jogar";
             this.btnOption3.UseCompatibleTextRendering = true;
             this.btnOption3.UseVisualStyleBackColor = true;
+            this.btnOption3.Click += new System.EventHandler(this.btnOption3_Click);
             // 
             // btnOption2
             // 
@@ -123,7 +124,7 @@
             this.btnOption2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnOption2.ForeColor = System.Drawing.Color.Honeydew;
             this.btnOption2.Location = new System.Drawing.Point(0, 247);
-            this.btnOption2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOption2.Margin = new System.Windows.Forms.Padding(4);
             this.btnOption2.Name = "btnOption2";
             this.btnOption2.Size = new System.Drawing.Size(280, 46);
             this.btnOption2.TabIndex = 3;
@@ -144,7 +145,7 @@
             this.btnOption1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnOption1.ForeColor = System.Drawing.Color.Honeydew;
             this.btnOption1.Location = new System.Drawing.Point(0, 139);
-            this.btnOption1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOption1.Margin = new System.Windows.Forms.Padding(4);
             this.btnOption1.Name = "btnOption1";
             this.btnOption1.Size = new System.Drawing.Size(280, 46);
             this.btnOption1.TabIndex = 1;
@@ -168,7 +169,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(585, 420);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

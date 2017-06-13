@@ -901,6 +901,27 @@ namespace NavKids {
                 }
             }
         }
+
+        public static string[] getQuiz(string nivel) {
+            string[] ret = new string[] { };
+            using (SQLiteConnection conn = new SQLiteConnection(path)) {
+                using (SQLiteCommand comm = new SQLiteCommand("SELECT * FROM Questoes WHERE nivel = @nivel ORDER BY Random() LIMIT 1",conn)) {
+                    comm.Parameters.AddWithValue("@nivel", nivel);
+                    conn.Open();
+                    using (SQLiteDataReader reader = comm.ExecuteReader()) {
+                        while (reader.Read()) {
+                            ret = new string[] {
+                                reader["pergunta"].ToString(),
+                                reader["posivel1"].ToString(),
+                                reader["posivel2"].ToString(),
+                                reader["resposta"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+            return ret;
+        }
     }
 
 }
