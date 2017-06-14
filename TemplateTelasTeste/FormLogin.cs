@@ -1,10 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NavKids {
@@ -21,7 +15,6 @@ namespace NavKids {
         private void Form4_Load(object sender, EventArgs e) {
             AcceptButton = button1;
             CancelButton = button2;
-            
         }
 
         private void label1_Click(object sender, EventArgs e) {
@@ -37,14 +30,11 @@ namespace NavKids {
                 string[] configs = DbClass.getConfig(id);
                 // verifica o dia da ultima vez logado com o dia atual.
                 if (DbClass.getday(id).Substring(0, 10) == DbClass.GetNetworkTime().ToString("dd/MM/yyyy")) {
-                    //MessageBox.Show("Dia Igual");
-
                     // se o dia da ultima vez logado for igual, verifica-se o tempo de utilização.
                     if (DbClass.getOnlyNum(configs[8].ToString()) < 30) {
                         // se o tempo maximo foi atingido, então mostra mensagem de tempo max atingido >>
                         if (int.Parse(configs[9]) >= (DbClass.getOnlyNum(configs[8]) * 60 * 60) &&
                             int.Parse(configs[8]) != 0) {
-                            //MessageBox.Show("Max Hora");
                             lblLoginError.Text = "Tempo maximo de login diario atingido!!";
                             lblLoginError.Visible = true;
                         }
@@ -58,7 +48,6 @@ namespace NavKids {
                         // se o tempo maximo foi atingido, então mostra mensagem de tempo max atingido >>
                         if (int.Parse(configs[9]) >= (DbClass.getOnlyNum(configs[8]) * 60) &&
                             DbClass.getOnlyNum(configs[8]) != 0) {
-                            //MessageBox.Show("Max Min");
                             lblLoginError.Text = "Tempo maximo de login diario atingido!!";
                             lblLoginError.Visible = true;
                         }
@@ -71,15 +60,11 @@ namespace NavKids {
                 }
                 // se o dia do ultimo login for diferente, seta o dia como dia atual e zera o tempo usado do banco
                 else {
-                    //MessageBox.Show("diferente");
                     DbClass.setDia(id);
                     DbClass.setTempUsed(id);
                     logado = true;
                     this.Close();
                 }
-
-                //logado = false;
-                //this.Close();
             }
             else {
                 lblLoginError.Text = "Senha ou login incorretos!";

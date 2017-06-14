@@ -38,13 +38,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cmbTema = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -223,37 +220,11 @@
             this.flowLayoutPanel1.Controls.Add(this.groupBox3);
             this.flowLayoutPanel1.Controls.Add(this.groupBox1);
             this.flowLayoutPanel1.Controls.Add(this.groupBox2);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox4);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(849, 465);
             this.flowLayoutPanel1.TabIndex = 20;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.cmbTema);
-            this.groupBox4.Location = new System.Drawing.Point(3, 295);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(232, 120);
-            this.groupBox4.TabIndex = 20;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Alterar Tema ";
-            // 
-            // cmbTema
-            // 
-            this.cmbTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTema.FormattingEnabled = true;
-            this.cmbTema.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cmbTema.Items.AddRange(new object[] {
-            "azul ",
-            "rosa"});
-            this.cmbTema.Location = new System.Drawing.Point(58, 47);
-            this.cmbTema.Name = "cmbTema";
-            this.cmbTema.Size = new System.Drawing.Size(121, 24);
-            this.cmbTema.TabIndex = 0;
-            this.cmbTema.SelectedIndexChanged += new System.EventHandler(this.cmbTema_SelectedIndexChanged);
             // 
             // FormConfigs
             // 
@@ -281,7 +252,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -300,8 +270,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox cmbTema;
         private System.Windows.Forms.CheckBox checkBox1;
     }
 }
