@@ -381,14 +381,14 @@ namespace NavKids {
             }
         } */
 
-        public static string[] getday(string usuario) {
+        public static void getday(string usuario) {
             string[] ret = new string[] { };
             DateTime dataservidor = GetNetworkTime();
             //MessageBox.Show("" + (int)dataservidor.DayOfWeek);
             string dia = DateTime.Now.DayOfWeek.ToString();
             using (SQLiteConnection conn = new SQLiteConnection(path)) {
-                using (SQLiteCommand comm = new SQLiteCommand("DELETE FROM [usuarios] WHERE usuario = @usuario", conn)) {
-                    comm.Parameters.AddWithValue("@usuario", usuario);
+                using (SQLiteCommand comm = new SQLiteCommand("SELECT * FROM Config WHERE id = @id", conn)) {
+                    comm.Parameters.AddWithValue("@id", getId(usuario));
                     conn.Open();
                     using (SQLiteDataReader readerr = comm.ExecuteReader()) {
                         while (readerr.Read()) {
@@ -444,10 +444,7 @@ namespace NavKids {
                     MessageBox.Show("Hoje é Domingo, você não pode navegar hoje!");
                     Application.Restart();
                 }
-
             }
-
-            return ret;
         }
 
         /* public static string[] getConfig(int id) {
