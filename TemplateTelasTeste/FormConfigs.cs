@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NavKids {
     public partial class FormConfigs : Form {
-
         public FormConfigs() {
             InitializeComponent();
         }
@@ -60,7 +66,8 @@ namespace NavKids {
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e){
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
 
@@ -68,8 +75,10 @@ namespace NavKids {
 
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e){
-            if ((!char.IsLetter(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))){
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar)))
+            {
                 e.Handled = true;
             }
         }

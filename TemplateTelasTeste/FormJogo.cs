@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NavKids {
@@ -9,7 +16,6 @@ namespace NavKids {
         int id;
         string nivel;
         string[] quiz = new string[] { };
-
         public FormJogo(int id, string nivel) {
             InitializeComponent();
             this.id = id;
@@ -119,6 +125,11 @@ namespace NavKids {
                 btnIniciar.Enabled = true;
                 timer1.Enabled = false;
             }
+        }
+
+        private void rbResp2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

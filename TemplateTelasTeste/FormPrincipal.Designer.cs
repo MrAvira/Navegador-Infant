@@ -25,15 +25,20 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnOption3 = new System.Windows.Forms.Button();
             this.btnOption2 = new System.Windows.Forms.Button();
             this.btnOption1 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
             // 
@@ -55,6 +60,7 @@
             // btnLogout
             // 
             this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnLogout.BackgroundImage = global::NavKids.Properties.Resources.icons8_Right_21;
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -68,14 +74,14 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(280, 46);
             this.btnLogout.TabIndex = 4;
-            this.btnLogout.Text = "             Logout";
+            this.btnLogout.Text = "             Sair";
             this.btnLogout.UseCompatibleTextRendering = true;
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnMenu
             // 
-            this.btnMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenu.BackgroundImage")));
+            this.btnMenu.BackgroundImage = global::NavKids.Properties.Resources.icons8_Xbox_Menu1;
             this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(104)))));
@@ -94,6 +100,7 @@
             // btnOption3
             // 
             this.btnOption3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnOption3.BackgroundImage = global::NavKids.Properties.Resources.icons8_Game_Controller_Filled1;
             this.btnOption3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnOption3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOption3.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -115,6 +122,7 @@
             // btnOption2
             // 
             this.btnOption2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnOption2.BackgroundImage = global::NavKids.Properties.Resources.icons8_Engineering1;
             this.btnOption2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnOption2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOption2.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -136,6 +144,7 @@
             // btnOption1
             // 
             this.btnOption1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnOption1.BackgroundImage = global::NavKids.Properties.Resources.icons8_Waypoint_Map1;
             this.btnOption1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnOption1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOption1.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -154,11 +163,6 @@
             this.btnOption1.UseVisualStyleBackColor = false;
             this.btnOption1.Click += new System.EventHandler(this.btnOption1_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 10000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -174,6 +178,7 @@
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NavKids";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Template_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

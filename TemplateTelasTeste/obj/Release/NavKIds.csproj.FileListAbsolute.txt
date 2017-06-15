@@ -1,3 +1,4 @@
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\bin\Release\TemplateTelasTeste.exe.config
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Release\TemplateTelasTeste.exe
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Release\TemplateTelasTeste.pdb
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Release\NavKids.exe.config

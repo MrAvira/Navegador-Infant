@@ -1,11 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NavKids {
     public partial class FormConfigUser : Form {
         string usuario;
         int id;
-
         public FormConfigUser(string usuario) {
             this.usuario = usuario;
             id = DbClass.getId(usuario);
@@ -59,8 +65,8 @@ namespace NavKids {
         }
 
         private void button3_Click(object sender, EventArgs e) {
-            string[] configs = new string[9];
 
+            string[] configs = new string[9];
             configs[0] = SEGUNDA.Checked.ToString();
             configs[1] = TERCA.Checked.ToString();
             configs[2] = QUARTA.Checked.ToString();
@@ -97,26 +103,35 @@ namespace NavKids {
             }
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e){
-            if ((!char.IsLetter(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))){
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar)))
+            {
                 e.Handled = true;
             }
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e){
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e){
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
             string x;
             x = comboBox1.ToString();
             MessageBox.Show("Selecione uma das opções!");
             comboBox1.SelectedItem = x;
+
+
         }
 
-        private void comboBox1_KeyDown(object sender, KeyEventArgs e){
+        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
+        {
                 e.Handled = true;
                 e.SuppressKeyPress = true;
+            
         }
     }
 }

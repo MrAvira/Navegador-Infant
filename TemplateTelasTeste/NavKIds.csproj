@@ -73,6 +73,9 @@
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -176,6 +179,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.manifest" />
     <None Include="DataBase.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -199,6 +203,16 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\icons8-Xbox Menu1.png" />
+    <None Include="Resources\icons8-Waypoint Map1.png" />
+    <None Include="Resources\icons8-Right 21.png" />
+    <None Include="Resources\icons8-Game Controller Filled1.png" />
+    <None Include="Resources\icons8-Engineering1.png" />
+    <None Include="Resources\icons8-Xbox Menu.png" />
+    <None Include="Resources\icons8-Engineering.png" />
+    <None Include="Resources\icons8-Game Controller Filled.png" />
+    <None Include="Resources\icons8-Right 2.png" />
+    <None Include="Resources\icons8-Waypoint Map.png" />
     <None Include="Resources\derp3l.jpg" />
     <None Include="Resources\abs.jpg" />
     <None Include="Resources\imagem.jpg" />
@@ -206,7 +220,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 e x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

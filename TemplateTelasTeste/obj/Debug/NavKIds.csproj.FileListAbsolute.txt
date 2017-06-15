@@ -21,3 +21,72 @@ C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\Na
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\NavKIds.csproj.GenerateResource.Cache
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\NavKids.exe
 C:\Users\flavi\Documents\GitHub\Navegador-Infant\TemplateTelasTeste\obj\Debug\NavKids.pdb
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\NavKids.exe.config
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.exe
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.pdb
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\DataBase.db
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\NavKids.exe
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\NavKids.pdb
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.dll
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.dll
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.xml
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.xml
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKIds.csprojResolveAssemblyReference.cache
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormJogo.resources
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormPrincipal.resources
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormNavegador.resources
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormConfigs.resources
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormLogin.resources
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormConfigUser.resources
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.Properties.Resources.resources
+C:\Users\tomy1\Desktop\Navegador-Infant-master (1)\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKIds.csproj.GenerateResource.Cache
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\NavKids.exe.config
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.exe
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.pdb
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\DataBase.db
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\NavKids.exe
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\NavKids.pdb
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.dll
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.dll
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.xml
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.xml
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKIds.csprojResolveAssemblyReference.cache
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormJogo.resources
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormPrincipal.resources
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormNavegador.resources
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormConfigs.resources
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormLogin.resources
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormConfigUser.resources
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.Properties.Resources.resources
+C:\Users\flavi\Downloads\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKIds.csproj.GenerateResource.Cache
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\NavKids.exe.config
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.exe
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.pdb
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\DataBase.db
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\NavKids.exe
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\NavKids.pdb
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.dll
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.dll
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.xml
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\bin\Debug\System.Data.SQLite.xml
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKIds.csprojResolveAssemblyReference.cache
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormJogo.resources
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormPrincipal.resources
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormNavegador.resources
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormConfigs.resources
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormLogin.resources
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.FormConfigUser.resources
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKids.Properties.Resources.resources
+C:\Users\pedro\Desktop\Navegador-Infant-master-1--master\Navegador-Infant-master\TemplateTelasTeste\obj\Debug\NavKIds.csproj.GenerateResource.Cache
