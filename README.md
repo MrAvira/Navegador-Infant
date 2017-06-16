@@ -1,5 +1,5 @@
 # Navegador-Infant
 
-#Observação:
-#Login: admin
-#Senha: admin
+Observação:
+Login: admin
+Senha: admin
